@@ -1,0 +1,388 @@
+
+/* ==========================================
+   03. DESIGN GRÁFICO — INÊS LIMA
+========================================== */
+
+/* CONFIGURAÇÕES GERAIS */
+
+.pagina-design {
+    margin: 0;
+    background-color: #ffffff;
+    color: #514a35;
+    font-family: 'Dmsans', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.pagina-design *,
+.pagina-design *::before,
+.pagina-design *::after {
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.pagina-design .navbar {
+    background-color: #514a35;
+    padding: 20px 6%;
+    border: none;
+}
+
+.pagina-design .navbar nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pagina-design .navbar a {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.pagina-design .navbar a:hover {
+    opacity: 0.65;
+}
+
+/* ==========================================
+   NAVEGAÇÃO - PROJETO ANTERIOR
+========================================== */
+
+.design-navegacao {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+    padding: 35px 4% 20px;
+}
+
+.projeto-anterior {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    font-family: 'Dmsans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #514a35;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: opacity 0.3s ease;
+}
+
+.projeto-anterior span {
+    font-size: 30px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.projeto-anterior:hover {
+    opacity: 0.65;
+}
+
+.projeto-anterior:hover span {
+    transform: translateX(-6px);
+}
+
+/* ==========================================
+   APRESENTAÇÃO DO PROJETO
+========================================== */
+
+.design-topo {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    padding: 20px 4% 45px;
+}
+
+.design-introducao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+
+    width: 100%;
+}
+
+/* NÚMERO 03 */
+
+.design-numero {
+    display: block;
+
+    font-family: 'Dmsans', Arial, sans-serif;
+    font-size: clamp(100px, 12vw, 200px);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.08em;
+
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* TÍTULO E DESCRIÇÃO */
+
+.design-descricao {
+    max-width: 450px;
+}
+
+.design-descricao h1 {
+    font-family: 'Dmsans', Arial, sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+
+    color: #514a35;
+    margin: 0 0 20px;
+}
+
+.design-descricao p {
+    font-family: 'Dmsans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: #777777;
+    margin: 0;
+}
+
+/* ==========================================
+   GALERIA DE IMAGENS
+========================================== */
+
+.design-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+
+    width: 100%;
+    padding: 0 4% 90px;
+    margin: 0;
+
+    align-items: start;
+}
+
+/* CADA PROJETO */
+
+.design-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+}
+
+/* IMAGENS */
+
+.design-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* LEGENDAS */
+
+.design-item figcaption {
+    width: 100%;
+    margin-top: 12px;
+    padding: 0;
+
+    font-family: 'Dmsans', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+
+    color: #777777;
+}
+
+/* ==========================================
+   RESPONSIVO - TABLETS
+========================================== */
+
+@media (max-width: 900px) {
+
+    .design-numero {
+        font-size: 110px;
+    }
+
+    .design-descricao h1 {
+        font-size: 36px;
+    }
+
+    .design-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 20px;
+    }
+}
+
+/* ==========================================
+   RESPONSIVO - TELEMÓVEIS
+========================================== */
+
+@media (max-width: 600px) {
+
+    /* NAVBAR */
+
+    .pagina-design .navbar {
+        padding: 18px 4%;
+    }
+
+    .pagina-design .navbar nav {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .pagina-design .navbar a {
+        font-size: 14px;
+    }
+
+    /* NAVEGAÇÃO */
+
+    .design-navegacao {
+        padding: 25px 5% 15px;
+    }
+
+    .projeto-anterior {
+        font-size: 16px;
+        gap: 8px;
+    }
+
+    .projeto-anterior span {
+        font-size: 24px;
+    }
+
+    /* APRESENTAÇÃO */
+
+    .design-topo {
+        padding: 20px 5% 35px;
+    }
+
+    .design-introducao {
+        gap: 30px;
+    }
+
+    .design-numero {
+        font-size: clamp(65px, 18vw, 90px);
+    }
+
+    .design-descricao h1 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .design-descricao p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* GALERIA */
+
+    .design-gallery {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 5% 60px;
+    }
+
+    .design-item figcaption {
+        font-size: 12px;
+        margin-top: 8px;
+    }
+}
+
+/* ==========================================
+   ACESSIBILIDADE
+========================================== */
+
+.projeto-anterior:focus-visible {
+    outline: 3px solid #d2e3fb;
+    outline-offset: 4px;
+}
+
+
+/* GALERIA - 3 IMAGENS LADO A LADO */
+
+.design-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.4fr;
+    column-gap: 60px; /* Espaço horizontal entre as imagens */
+    row-gap: 30px;
+
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 4% 90px;
+
+    align-items: center;
+}
+
+/* CADA PROJETO */
+
+.design-item,
+.design-item:nth-child(1),
+.design-item:nth-child(2),
+.design-item:nth-child(3) {
+    grid-column: auto;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+}
+
+/* IMAGENS VERTICAIS */
+
+.design-item:nth-child(1) img,
+.design-item:nth-child(2) img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* IMAGEM HORIZONTAL */
+
+.design-item:nth-child(3) img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* LEGENDAS */
+
+.design-item figcaption {
+    width: 100%;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+    .design-gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .design-gallery {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
