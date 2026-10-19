@@ -59,7 +59,7 @@ a { text-decoration: none; color: inherit; }
 /* MENU */
 .navbar {
     padding: 25px 6%;
-    border-bottom: 1px solid var(--texto);
+    border-bottom: 1px solid var(--castanho);
 }
 
 .navbar nav {
@@ -255,7 +255,7 @@ a { text-decoration: none; color: inherit; }
 
 /* FERRAMENTAS: FUNDO AZUL SEM LINHAS */
 .ferramentas {
-    background-color: var(--texto);
+    background-color: var(--castanho);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -280,10 +280,12 @@ a { text-decoration: none; color: inherit; }
     font-size: clamp(40px, 5vw, 65px);
     font-weight: 400;
     margin-bottom: 45px;
+    background-color: var(--castanho);
 }
 
 .projeto {
     display: flex;
+    background-color: var(--fundo2);
     align-items: center;
     gap: 35px;
     padding: 25px 10px;
@@ -454,7 +456,7 @@ a { text-decoration: none; color: inherit; }
 
 .ferramenta img {
     display: block;
-    width: 100%;
+    width: 300%;
     max-width: 65px;
     height: 65px;
     object-fit: contain;
@@ -554,3 +556,102 @@ a { text-decoration: none; color: inherit; }
     }
 }
 
+
+/* =====================================
+   FUNDO E TEXTO - FERRAMENTAS, PROJETOS E CONTACTOS
+===================================== */
+
+/* FUNDO IGUAL AO SOBRE MIM */
+.projetos,
+.contactos {
+    background-color: #FFFAF8;
+    color: #514a35;
+}
+
+/* TÍTULO DOS PROJETOS */
+.projetos > h2 {
+    background-color: transparent;
+    color: #514a35;
+}
+
+/* LISTA DOS PROJETOS */
+.projeto {
+    background-color: #FFFAF8;
+    color: #514a35;
+    border-top: 1px solid #514a35;
+}
+
+.projeto:last-child {
+    border-bottom: 1px solid #514a35;
+}
+
+/* EFEITO AO PASSAR O RATO */
+.projeto:hover {
+    color: #777777;
+}
+
+/* CONTACTOS */
+.contactos h2,
+.contactos p,
+.contactos a {
+    color: #514a35;
+}
+
+
+/* LINK DO CURRÍCULO */
+
+.link-curriculo {
+    display: block;
+    width: fit-content;
+    margin-top: 15px;
+
+    color: #514a35;
+    font-family: 'Dmsans', Arial, sans-serif;
+    font-size: 18px;
+
+    text-decoration: underline;
+    text-underline-offset: 5px;
+
+    transition: opacity 0.3s ease;
+}
+
+.link-curriculo:hover {
+    opacity: 0.6;
+}
+
+
+/* PORTFÓLIO MAIOR E ENCOSTADO À ESQUERDA */
+
+.hero {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.hero-conteudo {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-titulo {
+    font-size: 19cqw;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.025em;
+}
+
+/* TELEMÓVEIS */
+
+@media (max-width: 600px) {
+    .hero {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .hero-titulo {
+        font-size: 19cqw;
+        text-align: left;
+    }
+}

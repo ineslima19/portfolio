@@ -46,3 +46,76 @@ if (caption) {
   showSlide(0);
 });
 
+
+/* =====================================
+   SEGUNDO CARROSSEL - EXPLORAÇÃO VISUAL
+===================================== */
+
+const exploracaoCarousel = document.querySelector(
+    ".exploracao-carousel"
+);
+
+if (exploracaoCarousel) {
+
+    const slidesExploracao = exploracaoCarousel.querySelectorAll(
+        ".exploracao-slide"
+    );
+
+    const btnAnterior = exploracaoCarousel.querySelector(
+        ".exploracao-prev"
+    );
+
+    const btnSeguinte = exploracaoCarousel.querySelector(
+        ".exploracao-next"
+    );
+
+    const contadorExploracao = exploracaoCarousel.querySelector(
+        ".exploracao-counter"
+    );
+
+    let indiceExploracao = 0;
+
+    function mostrarExploracao(indice) {
+
+        indiceExploracao =
+            (indice + slidesExploracao.length) %
+            slidesExploracao.length;
+
+        slidesExploracao.forEach((slide, i) => {
+            slide.classList.toggle(
+                "active",
+                i === indiceExploracao
+            );
+        });
+
+        contadorExploracao.textContent =
+            String(indiceExploracao + 1).padStart(2, "0") +
+            " / " +
+            String(slidesExploracao.length).padStart(2, "0");
+    }
+
+    if (slidesExploracao.length > 0) {
+
+        btnAnterior.addEventListener("click", () => {
+            mostrarExploracao(indiceExploracao - 1);
+        });
+
+        btnSeguinte.addEventListener("click", () => {
+            mostrarExploracao(indiceExploracao + 1);
+        });
+
+        exploracaoCarousel.addEventListener("keydown", (e) => {
+            if (e.key === "ArrowLeft") {
+                e.preventDefault();
+                mostrarExploracao(indiceExploracao - 1);
+            }
+
+            if (e.key === "ArrowRight") {
+                e.preventDefault();
+                mostrarExploracao(indiceExploracao + 1);
+            }
+        });
+
+        mostrarExploracao(0);
+    }
+}

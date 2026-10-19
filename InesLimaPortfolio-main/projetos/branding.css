@@ -116,15 +116,18 @@
 
 /* NÚMERO 01 */
 
+
 .branding-number {
-    font-family: 'Dmsans', Arial, sans-serif;
-    font-size: clamp(100px, 12vw, 200px);
+    font-family: Arial, sans-serif;
+    font-size: clamp(90px, 13vw, 210px);
     font-weight: 900;
     line-height: 0.9;
-    letter-spacing: -0.08em;
+    letter-spacing: -0.07em;
     color: #514a35;
     margin: 0;
+    padding-right: 0.04em;
 }
+
 
 /* TÍTULO E DESCRIÇÃO */
 
@@ -605,4 +608,300 @@
 
 .carousel-caption:empty {
     display: none;
+}
+
+
+/* =====================================
+   IDENTIDADE DA MARCA
+===================================== */
+
+.branding-identidade {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+
+    padding: 90px 6%;
+    background-color: #ffffff;
+}
+
+.identidade-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.identidade-imagem img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+.identidade-texto {
+    max-width: 480px;
+}
+
+.identidade-texto h2 {
+    font-size: clamp(30px, 3vw, 45px);
+    font-weight: 800;
+    color: #514a35;
+    margin-bottom: 25px;
+}
+
+.identidade-texto p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777777;
+}
+
+/* =====================================
+   EXPLORAÇÃO VISUAL
+===================================== */
+
+.branding-exploracao-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+/* GALERIA À ESQUERDA */
+
+.branding-exploracao-layout .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.branding-exploracao-layout .gallery-item,
+.branding-exploracao-layout .gallery-item:nth-child(4),
+.branding-exploracao-layout .gallery-item:nth-child(5) {
+    grid-column: auto;
+}
+
+/* TEXTO À DIREITA */
+
+.branding-exploracao-layout .gallery-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    margin: 0;
+}
+
+.branding-exploracao-layout .gallery-header h2 {
+    font-size: clamp(30px, 3vw, 45px);
+    color: #514a35;
+}
+
+.branding-exploracao-layout .gallery-header p {
+    max-width: 450px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777777;
+}
+
+/* =====================================
+   RESPONSIVO
+===================================== */
+
+@media (max-width: 900px) {
+
+    .branding-identidade,
+    .branding-exploracao-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .branding-identidade {
+        padding: 60px 5%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .branding-exploracao-layout .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .identidade-texto h2,
+    .branding-exploracao-layout .gallery-header h2 {
+        font-size: 30px;
+    }
+
+    .identidade-texto p,
+    .branding-exploracao-layout .gallery-header p {
+        font-size: 14px;
+    }
+}
+
+
+/* =====================================
+   SEGUNDO CARROSSEL - EXPLORAÇÃO VISUAL
+===================================== */
+
+.branding-exploracao-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+/* CARROSSEL */
+
+.exploracao-carousel {
+    position: relative;
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    background-color: #f7f7f7;
+}
+
+/* IMAGENS */
+
+.exploracao-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.exploracao-slide.active {
+    display: block;
+    animation: aparecer 0.4s ease;
+}
+
+/* SETAS */
+
+.exploracao-prev,
+.exploracao-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba(255,255,255,0.9);
+    color: #514a35;
+
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.exploracao-prev {
+    left: 15px;
+}
+
+.exploracao-next {
+    right: 15px;
+}
+
+.exploracao-prev:hover,
+.exploracao-next:hover {
+    background-color: #ffffff;
+}
+
+/* CONTADOR */
+
+.exploracao-counter {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    padding: 10px 15px;
+    border-radius: 30px;
+
+    background-color: rgba(255,255,255,0.9);
+    color: #514a35;
+
+    font-size: 13px;
+    font-weight: 600;
+    z-index: 5;
+}
+
+/* TEXTO À DIREITA */
+
+.exploracao-texto {
+    max-width: 480px;
+}
+
+.exploracao-texto h2 {
+    font-family: 'Dmsans', Arial, sans-serif;
+    font-size: clamp(30px, 4vw, 55px);
+    font-weight: 800;
+    color: #514a35;
+    margin-bottom: 25px;
+}
+
+.exploracao-texto p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777777;
+    margin-bottom: 20px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+    .branding-exploracao-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .exploracao-carousel {
+        height: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+    .exploracao-carousel {
+        height: 350px;
+    }
+
+    .exploracao-texto h2 {
+        font-size: 30px;
+    }
+
+    .exploracao-texto p {
+        font-size: 14px;
+    }
+}
+
+
+/* ALINHAR IDENTIDADE DA MARCA COM EXPLORAÇÃO VISUAL */
+
+.branding-identidade {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 70px;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.identidade-texto {
+    max-width: 480px;
+    width: 100%;
+    justify-self: start;
+}
+
+/* MANTER RESPONSIVO */
+
+@media (max-width: 900px) {
+    .branding-identidade {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
