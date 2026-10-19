@@ -905,3 +905,11 @@
         padding-right: 5%;
     }
 }
+
+
+/* ESPAÇAMENTO ENTRE PARÁGRAFOS - CONCEITO DO LOGÓTIPO */
+
+.identidade-texto p + p {
+    margin-top: 25px;
+}
+
