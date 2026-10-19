@@ -8,36 +8,22 @@
 
     <title>Design Gráfico | Inês Lima</title>
 
-    <link rel="stylesheet" href="/InesLimaPortfolio-main/style.css">
-    <link rel="stylesheet" href="/InesLimaPortfolio-main/projetos/design-grafico.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../projetos/design-grafico.css">
 </head>
-
-
-<!-- VISUALIZADOR DE IMAGENS -->
-
-<div class="lightbox" id="lightbox">
-    <button class="lightbox-fechar"
-            type="button"
-            aria-label="Fechar imagem">
-        &times;
-    </button>
-
-    <img id="lightbox-imagem" src="" alt="">
-</div>
-
-<script src="../lightbox.js"></script>
-
 
 <body class="pagina-design">
 
     <!-- MENU -->
-    <header class="navbar">
-        <nav>
-            <a href="/index.html#sobre">Sobre Mim</a>
-            <a href="/index.html#projetos">Projetos</a>
-            <a href="/index.html#contactos">Contactos</a>
-        </nav>
-    </header>
+    
+<header class="navbar">
+    <nav>
+        <a href="../../index.html#sobre">Sobre Mim</a>
+        <a href="../../index.html#projetos">Projetos</a>
+        <a href="../../index.html#contactos">Contactos</a>
+    </nav>
+</header>
+
 
     <main>
 
@@ -45,7 +31,7 @@
         
 <div class="navegacao-projetos">
 
-    <a href="/InesLimaPortfolio-main/projetos/editorial.html" class="projeto-anterior">
+    <a href="../projetos/editorial.html" class="projeto-anterior">
         <span aria-hidden="true">←</span>
         Projeto anterior
     </a>
@@ -86,7 +72,7 @@
             <!-- IMAGEM 1 -->
             <figure class="design-item">
                 <img
-                    src="/InesLimaPortfolio-main/imagens/Cartaz da Francofonia com Câmara e Arco-Íris.png"
+                    src="../imagens/Cartaz da Francofonia com Câmara e Arco-Íris.png"
                     alt="Cartaz da Francofonia"
                     loading="lazy">
                 <figcaption>Cartaz para um evento da Francofonia</figcaption>
@@ -95,7 +81,7 @@
             <!-- IMAGEM 2 -->
             <figure class="design-item">
                 <img
-                    src="/InesLimaPortfolio-main/imagens/cartaz_filosofia_original_intacto.png"
+                    src="../imagens/cartaz_filosofia_original_intacto.png"
                     alt="Cartaz de filosofia"
                     loading="lazy">
                 <figcaption>Cartaz dia mundial da Filosofia</figcaption>
@@ -104,7 +90,7 @@
             <!-- IMAGEM 3 -->
             <figure class="design-item">
                 <img
-                    src="/InesLimaPortfolio-main/imagens/cartaz_fundo_original_intacto.png"
+                    src="../imagens/cartaz_fundo_original_intacto.png"
                     alt="Terceiro cartaz de design gráfico"
                     loading="lazy">
                 <figcaption>Postal boas festas</figcaption>
@@ -112,7 +98,25 @@
 
         </section>
 
+   
     </main>
+
+    <!-- VISUALIZADOR DE IMAGENS -->
+    <div class="lightbox" id="lightbox">
+
+        <button
+            class="lightbox-fechar"
+            type="button"
+            aria-label="Fechar imagem">
+            &times;
+        </button>
+
+        <img id="lightbox-imagem" src="" alt="">
+
+    </div>
+
+    <script src="../lightbox.js"></script>
 
 </body>
 </html>
+
