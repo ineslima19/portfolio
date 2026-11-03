@@ -78,7 +78,7 @@ a { text-decoration: none; color: inherit; }
 
 /* APRESENTAÇÃO / HERO */
 .hero {
-    background-color: var(--castanho);
+    background-color: var(--bege);
     min-height: clamp(300px, 39vw, 550px);
     display: flex;
     align-items: center;
@@ -112,7 +112,7 @@ a { text-decoration: none; color: inherit; }
     font-weight: 400;
     letter-spacing: -0.025em;
     line-height: 1;
-    color: var(--bege);
+    color: var(--texto);
     margin: 0;
     white-space: nowrap;
 }
@@ -127,7 +127,7 @@ a { text-decoration: none; color: inherit; }
     font-size: clamp(200px, 7cqw, 110px);
     font-weight: 20;
     line-height: 1;
-    color: var(--texto);
+    color: var(--castanho);
     white-space: nowrap;
     z-index: 2;
 }
@@ -138,7 +138,7 @@ a { text-decoration: none; color: inherit; }
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
     gap: 8%;
     padding: 70px 3% 100px;
-    background-color: #FFFAF8;
+    background-color: var(--bege);
     color: var(--castanho);
     align-items: start;
 }
@@ -285,15 +285,15 @@ a { text-decoration: none; color: inherit; }
 
 .projeto {
     display: flex;
-    background-color: var(--fundo2);
+    background-color: var(--bege);
     align-items: center;
     gap: 35px;
     padding: 25px 10px;
-    border-top: 1px solid var(--fundo);
+    border-top: 1px solid var(--bege);
     transition: padding 0.3s, color 0.3s;
 }
 
-.projeto:last-child { border-bottom: 1px solid var(--fundo); }
+.projeto:last-child { border-bottom: 1px solid var(--bege); }
 .projeto h3 {
     font-size: clamp(20px, 3vw, 36px);
     font-weight: 400;
@@ -307,7 +307,7 @@ a { text-decoration: none; color: inherit; }
 .contactos {
     padding: 80px 6%;
     background-color: var(--castanho);
-    color: var(--fundo);
+    color: var(--bege);
 }
 .contactos h2 {
     font-size: clamp(38px, 5vw, 55px);
